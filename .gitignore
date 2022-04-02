@@ -1,0 +1,17 @@
+# Dependencies
+node_modules
+
+# Coverage
+coverage
+
+# Transpiled files
+dist
+
+# JetBrains IDE
+.idea
+
+# Optional eslint cache
+.eslintcache
+
+# Misc
+.DS_Store
