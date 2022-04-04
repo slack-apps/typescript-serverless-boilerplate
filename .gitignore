@@ -1,11 +1,18 @@
-# Dependencies
+# package directories
 node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# esbuild directories
+.esbuild
 
 # Coverage
 coverage
 
-# Transpiled files
-dist
+# dotenv environment variables file
+.env
 
 # JetBrains IDE
 .idea

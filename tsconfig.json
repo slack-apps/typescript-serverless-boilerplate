@@ -1,12 +1,12 @@
 {
+  "extends": "./tsconfig.paths.json",
   "compilerOptions": {
     "target": "ES2020",
-    "module": "ES2020",
-    "rootDir": "./",
+    "module": "CommonJS",
+    "lib": ["ESNext"],
     "moduleResolution": "node",
-    "paths": {},
     "sourceMap": true,
-    "outDir": "./dist",
+    "outDir": "lib",
     "importHelpers": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -21,8 +21,16 @@
     "noPropertyAccessFromIndexSignature": true,
     "skipLibCheck": true
   },
-  "include": [
-    "src/**/*",
-    "__tests__/**/*"
-  ]
+  "include": ["src/**/*", "serverless.ts", "__tests__/**/*"],
+  "exclude": [
+    "node_modules/**/*",
+    ".serverless/**/*",
+    ".webpack/**/*",
+    "_warmup/**/*",
+    ".vscode/**/*",
+    ".idea/**/*"
+  ],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
 }
