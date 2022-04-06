@@ -7,7 +7,7 @@ features:
     messages_tab_read_only_enabled: false
   bot_user:
     display_name: typescript-serverless-boilerplate
-    always_online: true
+    always_online: false
 oauth_config:
   scopes:
     bot:
@@ -15,6 +15,7 @@ oauth_config:
       - chat:write
 settings:
   event_subscriptions:
+    request_url: https://DUMMY_REQUEST_URL/slack/events
     bot_events:
       - message.channels
   interactivity:
@@ -22,4 +23,4 @@ settings:
   org_deploy_enabled: false
   socket_mode_enabled: false
   is_hosted: false
-  token_rotation_enabled: true
+  token_rotation_enabled: false
