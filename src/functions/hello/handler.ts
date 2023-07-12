@@ -9,7 +9,6 @@ const awsLambdaReceiver = new AwsLambdaReceiver({
 const app = new App({
   token: process.env['SLACK_BOT_TOKEN'] as string,
   receiver: awsLambdaReceiver,
-  processBeforeResponse: true,
 });
 
 app.message('hello', async ({ message, say }) => {
