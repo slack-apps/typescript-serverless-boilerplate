@@ -8,18 +8,30 @@ features:
   bot_user:
     display_name: typescript-serverless-boilerplate
     always_online: false
+  slash_commands:
+    - command: /slash
+      url: https://DUMMY_REQUEST_URL/slack/events
+      description: Slash command for typescript-serverless-boilerplate
+      should_escape: false
 oauth_config:
   scopes:
+    user:
+      - channels:write
+      - groups:write
     bot:
       - channels:history
+      - channels:read
       - chat:write
+      - groups:read
+      - commands
 settings:
   event_subscriptions:
     request_url: https://DUMMY_REQUEST_URL/slack/events
     bot_events:
       - message.channels
   interactivity:
-    is_enabled: false
+    is_enabled: true
+    request_url: https://DUMMY_REQUEST_URL/slack/events
   org_deploy_enabled: false
   socket_mode_enabled: false
   is_hosted: false
