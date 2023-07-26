@@ -41,7 +41,11 @@ app.message('hello', async ({ message, say }) => {
 app.view('view_1', async ({ body, ack, view, client, logger }) => {
   await ack();
 
-  const val = view.state.values['block_1']!['input_1']!['value'] as string;
+  const val = view.state.values['block_1']?.['input_1']?.['value'];
+  if (!val) {
+    logger.error('No value found');
+    return;
+  }
 
   try {
     await client.chat.postMessage({
