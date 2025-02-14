@@ -20,7 +20,7 @@
   "devDependencies": {
     "@serverless/typescript": "^3.8.0",
     "@types/jest": "29.5.4",
-    "@types/node": "18.17.4",
+    "@types/node": "18.19.76",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "esbuild": "^0.17.19",
@@ -40,7 +40,7 @@
     "typescript": "5.1.6"
   },
   "engines": {
-    "node": "18.17.0"
+    "node": "18.20.6"
   },
   "suggest": {
     "@commitlint/{cli,config-conventional}": "Checks if your commit messages meet the conventional commit format",
